@@ -1,17 +1,15 @@
-//Programa : Comunicacao com Modulo RF 433 - Emissor
-//Autor : Arduino e Cia
-
 #include <VirtualWire.h>
 
-//Define pinos Led e Botao
-const int led = 7;
-const int s1 = 10;
-const int s2 = 11;
+
+int led = 7;
+int s1 = 10;
+int s2 = 11;
+
 int i1 =0;
 int i2 =0;
 char Valor_CharMsg[4]; 
-int x;
-
+int x =-1;
+int a;
 void setup() 
 {
   Serial.begin(9600);   
@@ -28,7 +26,7 @@ void loop()
   i1 = digitalRead(s1);
   i2 = digitalRead(s2);
 
-  if (!(i1 == 0 && i2 == 1) && !(i1 == 0 && i2 == 0) && !(i1 == 1 && i2 == 0))
+ if (!(i1 == 0 && i2 == 1) && !(i1 == 0 && i2 == 0) && !(i1 == 1 && i2 == 0))
   {
     x=0;
     itoa(x,Valor_CharMsg,10);
@@ -44,7 +42,7 @@ void loop()
     Serial.print("s2 - ");
     Serial.println(i2);
     Serial.println("Valor enviado: 0");
-  }
+    }
   
   if (i1 == 0 && i2 == 1)
   {
@@ -81,7 +79,7 @@ void loop()
     Serial.println(i2);
     Serial.println("Valor enviado: 2");
   }
-
+ a=x;
   if (i1 == 1 && i2 == 0)
   {
     x=3;
