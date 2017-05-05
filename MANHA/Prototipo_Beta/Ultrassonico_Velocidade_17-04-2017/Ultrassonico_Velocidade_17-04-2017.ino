@@ -7,7 +7,7 @@
 
 int intervalo = 3000, delay_time = 100, i = 0, i_temp;
 double referencia = 21.0; //referencia do tamanho total do recipiente ou local.
-double dist_cm, dist_m, vet_nivel[ARRAY_SIZE];
+double dist_cm, vet_nivel[ARRAY_SIZE];
 long tempo;
 double velocidade = 0.0;
 unsigned long millisAnterior = 0;
@@ -48,7 +48,7 @@ void loop()
     Serial.print("D1: ");
     Serial.println(vet_nivel[i+1]);
 
-    velocidade = ((vet_nivel[i_temp] - vet_nivel[i+1])/(intervalo/1000.0));
+    velocidade = ((vet_nivel[i_temp] - vet_nivel[i+1])/(intervalo/1000.0)); // cm/s
     
     Serial.print("VELICIDADE: ");
     Serial.println(velocidade);
