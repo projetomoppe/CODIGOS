@@ -1,1 +1,2 @@
-1.0.0 - 15/05/17 - Git instalado nos 3 computadores próximos a varanda do projeto
+1.0.1 - 15/05/17 - Teste PC 1.
+1.0.0 - 15/05/17 - Git instalado nos 3 computadores próximos a varanda do projeto.
