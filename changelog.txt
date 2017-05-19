@@ -1,3 +1,5 @@
+
+1.0.4 - 19/05/17 - exercitando os comandos do controle de versão. // VICTOR BALDEZ
 1.0.3 - 19/05/17 - aprendi a faze algo, falta o jão. // VICTOR BALDEZ 
 1.0.2 - 15/05/17 - 4002-8922 ps:joaninha64. // VICTOR BALDEZ
 1.0.1 - 15/05/17 - Teste PC 1. // EDSON BOLDRINI
