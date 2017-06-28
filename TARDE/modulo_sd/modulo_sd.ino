@@ -4,7 +4,10 @@
 #include <SdFat.h>
 int trig = 6;
 int echo = 5;
-
+int s1 = 7;
+int s2 = 8;
+int a1 = 0;
+int a2 = 0;
 SdFat sdCard;
 SdFile meuArquivo;
  
@@ -18,7 +21,8 @@ void setup()
   pinMode(trig, OUTPUT);
   pinMode(echo, INPUT);
   Serial.begin(9600);
-
+  pinMode(s1 , INPUT);
+  pinMode(s2 , INPUT);
   pinMode(bot, INPUT);
 
   sdCard.begin(chipSelect,SPI_HALF_SPEED);
@@ -28,6 +32,8 @@ void setup()
  
 void loop()
 {
+  a1 = digitalRead (s1);
+  a2 = digitalRead (s2);
   valor = digitalRead (bot);
 
   digitalWrite(trig, LOW);
@@ -48,7 +54,10 @@ void loop()
   // Grava dados do potenciometro em LER_POT.TXT
   meuArquivo.print("distancia: ");
   meuArquivo.println(distancia);
- 
+  meuArquivo.print("sensor 1");
+  meuArquivo.println(a1);
+  meuArquivo.print("sensor 2");
+  meuArquivo.println(a2); 
   if (valor == HIGH)
   {
     // Interrompe o processo e fecha o arquivo
